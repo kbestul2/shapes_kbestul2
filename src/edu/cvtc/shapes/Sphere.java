@@ -18,15 +18,15 @@ public class Sphere extends Shape {
 	
 	// Gets the value of the radius of the sphere
 	public float getRadius() {
-		if (radius <= 0) {
-			throw new IllegalArgumentException("Circle radius argument \"" + radius + "\" must be a positive floating point number.");
-		}
-		
 		return radius;
 	}
 
 	// Sets the value of the radius of the sphere
 	private void setRadius(float radius) {
+		if (radius <= 0) {
+			throw new IllegalArgumentException("Circle radius argument \"" + radius + "\" must be a positive floating point number.");
+		}
+		
 		this.radius = radius;
 	}
 	
