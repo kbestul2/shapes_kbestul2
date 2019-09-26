@@ -6,12 +6,11 @@ import org.junit.Test;
 
 import edu.cvtc.shapes.Cuboid;
 import edu.cvtc.shapes.Dialog;
-import edu.cvtc.shapes.MessageBox;
 import edu.cvtc.shapes.Shape;
 
 public class CuboidTest {
 
-	Dialog messageBox = new MessageBox();
+	Dialog messageBox = new MessageBoxSub();
 	Cuboid cubeGlobal = new Cuboid(messageBox, 1.0f, 1.0f, 1.0f);
 	
 	// Constructor Tests
@@ -76,4 +75,10 @@ public class CuboidTest {
 		Cuboid cubeLocal = new Cuboid(messageBox, -1.0f, -1.0f, -1.0f);
 		cubeLocal.getVolume();
 	}
+	
+	@Test
+	public void testRender() {
+		cubeGlobal.render();
+	}
+	
 }

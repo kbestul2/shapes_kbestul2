@@ -15,10 +15,9 @@ public class MessageBox implements Dialog {
 	
 	@Override
 	public int show(String message, String title) {
-		
 		JOptionPane.showMessageDialog( null, message, title, JOptionPane.INFORMATION_MESSAGE);
 		
-		return 0;
+		return 0x00;
 	}
 
 }

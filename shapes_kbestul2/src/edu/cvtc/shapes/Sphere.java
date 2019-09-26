@@ -54,7 +54,7 @@ public class Sphere extends Shape implements Renderer {
 							"\nSurface Area: " + this.getSurfaceArea() +
 							"\nVolume: " + this.getVolume();
 		
-		super.getMessageBox().show(message, "Sphere");
+		this.getMessageBox().show(message, "Sphere");
 		
 	}
 

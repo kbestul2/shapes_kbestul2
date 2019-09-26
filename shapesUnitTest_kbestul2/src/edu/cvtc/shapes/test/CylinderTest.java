@@ -6,12 +6,11 @@ import org.junit.Test;
 
 import edu.cvtc.shapes.Cylinder;
 import edu.cvtc.shapes.Dialog;
-import edu.cvtc.shapes.MessageBox;
 import edu.cvtc.shapes.Shape;
 
 public class CylinderTest {
 	
-	Dialog messageBox = new MessageBox();
+	Dialog messageBox = new MessageBoxSub();
 	Cylinder cylinderGlobal = new Cylinder(messageBox, 1.0f, 1.0f);
 	
 	// Constructor Tests
@@ -71,4 +70,10 @@ public class CylinderTest {
 		Cylinder cylinderLocal = new Cylinder(messageBox, -1.0f, -1.0f);
 		cylinderLocal.getVolume();
 	}
+	
+	@Test
+	public void testRender() {
+		cylinderGlobal.render();
+	}
+	
 }

@@ -84,7 +84,7 @@ public class Cuboid extends Shape implements Renderer {
 							"\nSurface Area: " + this.getSurfaceArea() +
 							"\nVolume: " + this.getVolume();
 		
-		super.getMessageBox().show(message, "Cuboid");
+		this.getMessageBox().show(message, "Cuboid");
 		
 	}
 

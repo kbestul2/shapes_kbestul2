@@ -69,7 +69,7 @@ public class Cylinder extends Shape implements Renderer{
 							"\nSurface Area: " + this.getSurfaceArea() +
 							"\nVolume: " + this.getVolume();
 		
-		super.getMessageBox().show(message, "Cylinder");
+		this.getMessageBox().show(message, "Cylinder");
 		
 	}
 

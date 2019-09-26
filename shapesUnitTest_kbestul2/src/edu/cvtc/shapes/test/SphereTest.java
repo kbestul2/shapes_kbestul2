@@ -6,12 +6,11 @@ import org.junit.Test;
 
 import edu.cvtc.shapes.Sphere;
 import edu.cvtc.shapes.Dialog;
-import edu.cvtc.shapes.MessageBox;
 import edu.cvtc.shapes.Shape;
 
 public class SphereTest {
 
-	Dialog messageBox = new MessageBox();
+	Dialog messageBox = new MessageBoxSub();
 	Sphere sphereGlobal = new Sphere(messageBox, 1.0f);
 	
 	// Constructor Tests
@@ -65,6 +64,11 @@ public class SphereTest {
 	public void testGetVolume_IllegalArguments() {
 		Sphere sphereLocal = new Sphere(messageBox, -1.0f);
 		sphereLocal.getVolume();
+	}
+	
+	@Test
+	public void testRender() {
+		sphereGlobal.render();
 	}
 
 }
