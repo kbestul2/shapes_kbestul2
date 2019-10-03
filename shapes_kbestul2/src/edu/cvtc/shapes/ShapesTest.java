@@ -15,10 +15,12 @@ public class ShapesTest {
 			
 			Dialog messageBox = new MessageBox();
 			
+			ShapeFactory shapeFactory = new ShapeFactory(messageBox);
+			
 			// Create an object for each shape
-			Cuboid cuboid = new Cuboid(messageBox, 1, 0.5f, 2);
-			Cylinder cylinder = new Cylinder(messageBox, 3, 5);
-			Sphere sphere = new Sphere(messageBox, 7);
+			Cuboid cuboid = (Cuboid) shapeFactory.make(ShapeType.Cuboid);
+			Cylinder cylinder = (Cylinder) shapeFactory.make(ShapeType.Cylinder);
+			Sphere sphere = (Sphere) shapeFactory.make(ShapeType.Sphere);
 			
 			// Output each shape's data
 			cuboid.render();
